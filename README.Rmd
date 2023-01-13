@@ -1,0 +1,46 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# {nasis}
+
+<!-- badges: start -->
+<!-- badges: end -->
+ 
+The goal of {nasis} is to provide a National Soil Information System ('NASIS') Data Model abstraction layer via 'dm' and 'DBI'
+
+## Installation
+
+You can install the development version of {nasis} like so:
+
+``` r
+remotes::install_github("brownag/nasis")
+```
+
+## Example
+
+This is a basic example of how to use an SQLite data source (an 'RSQLite' `DBIConnection`) to create a NASIS data model object.
+
+```{r example}
+library(nasis)
+# remotes::install_github("brownag/soilDBdata") # install (if needed)
+
+dsn <- system.file("extdata", "fetchNASIS_pedons.sqlite", package = "soilDBdata")
+
+d <- nasis(dsn)
+
+class(d)
+
+d$site
+```

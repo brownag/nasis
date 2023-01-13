@@ -1,0 +1,15 @@
+Package: nasis
+Type: Package
+Title: National Soil Information System (NASIS) Data Model Interface
+Version: 0.1.0
+Authors@R: c(person(given="Andrew", family="Brown", email="andrew.g.brown@usda.gov", role = c("aut", "cre")))
+Maintainer: Andrew Brown <andrew.g.brown@usda.gov>
+Description: A 'NASIS' Data Model abstraction layer provided by the 'dm' package.
+License: CC0
+Imports: dm
+Suggests: soilDB, dbplyr
+LazyData: true
+Language: en-US
+Encoding: UTF-8
+RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
